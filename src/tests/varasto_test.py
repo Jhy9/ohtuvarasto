@@ -76,7 +76,7 @@ class TestVarasto(unittest.TestCase):
     def test_ylisuuri_otto_ei_saa_saldoa_miinukselle(self):
         self.varasto.lisaa_varastoon(5)
         self.varasto.ota_varastosta(6)
-        self.assertAlmostEqual(-2,self.varasto.saldo)
+        self.assertAlmostEqual(0,self.varasto.saldo)
     
     def test_str_palauttaa_oikeanlaisen_tulosteen(self):
         self.assertAlmostEqual(str(self.varasto)=="saldo = 0, vielä tilaa 10", True)
